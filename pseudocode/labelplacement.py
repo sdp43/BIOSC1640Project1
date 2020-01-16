@@ -59,7 +59,7 @@ def label_pos(key):
 	#i was thinking we could create a range of values that work in each dimension and then pick an appropriate position within that range.
 	#best position could be the position in the range that is closest to the center of the given molecule, or the middle position of the range need testing
 
-	#output (molecule name + position id)(3letter code + 3 digits for #) + position 
+	#output (molecule name + position id)(3letter code + 3 digits for #) + position  
 
 	#what if there is no possible range of values? just put label in center?
 
