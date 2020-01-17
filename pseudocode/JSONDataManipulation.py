@@ -1,10 +1,11 @@
-Jake and Devin: 1 and 2
+"""Jake and Devin: 1 and 2
 
 https://stackabuse.com/reading-and-writing-json-to-a-file-in-python/
 
 https://realpython.com/python-json/ (guide for converting JSON → Python) 
 
-1.
+1."""
+
 #Read in JSON from a file into a dict
 
 #Example code:
@@ -12,10 +13,10 @@ https://realpython.com/python-json/ (guide for converting JSON → Python)
 #import json
 
 #with open (‘data.txt’) as json_file:  
-***if reading in .json file need to figure out specific code line for that***
-	data = json.load(json_file)
+"""if reading in .json file need to figure out specific code line for that"""
+	#data = json.load(json_file)
 #json.load reads a string from a file, parses JSON data, populates a python dict with the   
-data, and returns it
+#data, and returns it
 #for each loop that populates the python dict with the data from the JSON file?
 	#for p in data[‘people’]:
 		print(‘Name: ‘ + p[‘name’])
@@ -23,18 +24,18 @@ data, and returns it
 		print(‘From: ‘ + p[‘from])
 		print(‘’) 
 
-(Scott Robinson, Stack Abuse.com)
+"""(Scott Robinson, Stack Abuse.com)
 
 **Possible solution to with open statement**
 with open("data_file.json", "w") as write_file:
     json.dump(data, write_file)
-(realpython.com)
+(realpython.com)"""
 
 #see if Json data can be read in and sorted in order of chain, residue number, then x, y, and z with other information not being directly saved unless needed
 
 
-2. 
-https://realpython.com/python-sort/
+"""2. 
+https://realpython.com/python-sort/"""
 
 #Sets from data
 
