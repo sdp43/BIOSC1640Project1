@@ -11,7 +11,7 @@ def ritters_bounding_sphere(pointlist):
 
 	#pick a random point x
 	#find the point y in the set that has the largest distance from x
-	#find the point z that has the largest distance from z
+	#find the point z that has the largest distance from x
 	#create a sphere with the center at the midpoint of y and z, and radius as half the distance from y to z
 	#while there is a point outside the sphere:
 		#create a new sphere including the outside point and the sphere
