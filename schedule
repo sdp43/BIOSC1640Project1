@@ -18,73 +18,73 @@
         What is our solution? How it is better than other solutions? Andrew and Jesse
 1-31-20:
     Deliverable #1: JSON file upload and parsing 
-        Description:
-        Division of labor (who is working on what):
-    Deliverable #2:
-        Description:
-        Division of labor (who is working on what):
+        Description: Reading the JSON file and parsing through the data describing the residues
+        Division of labor (who is working on what): Devin and Jake will take the lead on this portion, in accordance 
+        with the pseudocode they have already written, and delegate to other group members as needed.
 
 2-7-20:
     Deliverable #1: Introduction Peer Review 
         Description: Review of the other group's introduction paper. 
         Division of labor (who is working on what): Each group member will review individually.
 
+
 2-14-20:
     Deliverable #1:
-        Description:
+        Description: Begin working on materials and methods section.
         Division of labor (who is working on what):
-    Deliverable #2:
-        Description:
-        Division of labor (who is working on what):
+            General details  - Devin, Jake, Amy
+            How does the program work? (including input and output types) - Shivani, Andrew, Elizabeth, Jesse
+    Deliverable #2: 
+        Description: Begin writing code for calculating the sphere
+        Division of labor: Shivani and Amy will take the lead on this code, and delegate as needed. 
+            
+        
 
 2-21-20: Materials and Methods section Due 
-    Deliverable #1:
-        Description:
+        Description: Finish working on materials and methods section.
         Division of labor (who is working on what):
-    Deliverable #2:
-        Description:
-        Division of labor (who is working on what):
-
+            General details  - Devin, Jake, Amy
+            How does the program work? (including input and output types) - Shivani, Andrew, Elizabeth, Jesse
+            
+            
 2-28-20: Materials and Methods Peer Review 
     Deliverable #1: Materials and Methods Peer Review
         Description: Each group member will edit the other group's materials and methods paper. 
         Division of labor (who is working on what): Each group member will individually read and edit the other group's paper.
     Deliverable #2: Midterm presentation 
-        Description:
+        Description: Put together presentation of project so far.
         Division of labor (who is working on what):
+            Status/Accomplishments so far - Elizabeth, Jake
+            Changes from initial plan/what is/is not working well - Devin, Andrew, Shivani
+            How have we divided work/is the project on track/specific plans to finish - Amy, Jesse
+            Compilation into slides - all members
     Deliverable #3: Have sphere calculations and JSON code stuff done 
 
 3-6-20:
     Deliverable #1:
-        Description:
-        Division of labor (who is working on what):
-    Deliverable #2:
-        Description:
-        Division of labor (who is working on what):
+        Description: Continue working on code.  Begin writing code for the label placement based on spheres.
+        Division of Labor: Elizabeth, Andrew, and Jesse will take the lead and delegate code as needed.
 
 3-13-20:
     Deliverable #1:
-        Description:
-        Division of labor (who is working on what):
-    Deliverable #2:
-        Description:
-        Division of labor (who is working on what):
+        Description: Continue working on the code. 
+        Division of labor (who is working on what): Most of the program should be complete, so all of the group members 
+        will begin reviewing each other's code for efficiency. 
+
 
 3-20-20:
     Deliverable #1: Results and Discussion section due 
-        Description:
+        Description: Analyze our research to write the R&D section
         Division of labor (who is working on what):
-    Deliverable #2:
-        Description:
-        Division of labor (who is working on what):
+            Test data set - Devin, Shivani
+            Apply code to test set - Jake, Elizabeth, Andrew
+            Describe results - Jesse, Amy, Jake
+
 
 3-27-20:
     Deliverable #1: Results and Discussion Peer Review 
         Description: Review of the other group's results and discussion section.
         Division of labor (who is working on what): Each group member will individually read and edit the other group's paper.
-    Deliverable #2:
-        Description:
-        Division of labor (who is working on what):
 
 4-3-20: Final paper due.
 4-10-20: Final Presentation :)
