@@ -3,10 +3,33 @@ import json
 with open("single_frame.json") as file:
     data = json.load(file)
 
-print(data)
+#print(data)
 
-print(type(data))
+#print(type(data))
+
+protein = {}
+
 for atom in data:
+	chain = atom["chain"]
+	resn = atom["resn"]
+	resi = atom["resi"]
+	model = atom["model"]
+	key = (chain, resn, resi, model)
+	#print(key)
+	x = atom["x"]
+	y = atom["y"]
+	z = atom["z"]
+	pos = (x, y, z)
+
+	if key in protein:
+		temp = protein.get(key)
+		temp.append(pos)
+		protein[key] = temp 
+
+	else:
+		temp = []
+		temp.append(pos)
+		protein[key] = temp
 	#print(atom["resn"] + " " + str(atom["x"]) + " " + str(atom["y"]) + " " + str(atom["z"]) + " " + str(atom["resi"]) + " " + atom["chain"] + " " + str(atom["model"]))
 	#make a tuple, and add chain, resn, resi, model (key)
 	#check existing dictionary for that tuple
@@ -14,7 +37,8 @@ for atom in data:
 	#if the key exists in the dictionary, add the position to the list of positions at that key
 	# if the key doesn't exist, add it to dictionary along with list containing value
 
-
+#print(protein)
+#print(protein[('B', 'ASN', 29, 0)])
 
 chain = {}
 #add to the chain with chain["name"] = value
