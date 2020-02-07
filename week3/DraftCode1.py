@@ -24,7 +24,7 @@ for atom in data:
 	if key in protein:
 		temp = protein.get(key)
 		temp.append(pos)
-		protein[key] = temp 
+		protein[key] = temp
 
 	else:
 		temp = []
@@ -55,7 +55,7 @@ model = {}
 
 #for i in (write_file):   #loop through the json file thats been read in to sort the data
 #	if(write_file[i] == "Resn"):
-#		#need to figure out the line to test if we should read the data into a dictionary 
+#		#need to figure out the line to test if we should read the data into a dictionary
 #		residue[i] = write_file[i]
 #		print ((i, write_file[i]), end =" ") #don't need the print statement but maybe for a test
 
