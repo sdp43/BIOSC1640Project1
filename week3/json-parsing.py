@@ -8,7 +8,7 @@ def parse_json(filename):
     :returns: dictionary of format  {(chain, resn, resi, model) → [(x,y,x)]}
     :rtype: dictionary"""
 
-    
+
     with open("single_frame.json") as file:
         data = json.load(file)
 
@@ -42,6 +42,6 @@ def parse_json(filename):
 
     return protein
 
-if name == "__main__":
+if __name__ == "__main__":
     protein = parse_json("single_frame.json")
-    #print(protein)
+    print(protein)
