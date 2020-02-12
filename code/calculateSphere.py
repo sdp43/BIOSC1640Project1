@@ -82,6 +82,8 @@ def point_outside_sphere(point, center, radius):
 		return False
 
 def calculate_spheres(filename):
+
+	#get the protein information from the json file
 	protein_dict = parse_json(filename)
 	#make a dictionary of amino acids in the protein and set each value to the sphere specs
 	aa_spheres={}
@@ -119,6 +121,6 @@ def calculate_spheres(filename):
 	return aa_spheres, chain_spheres, model_spheres
 
 if __name__ == "__main__":
-	#get the protein information from the json file
+
 	aa_spheres, chain_spheres, model_spheres = calculate_spheres("single_frame.json")
-	print(chain_spheres)
+	#print(chain_spheres)
