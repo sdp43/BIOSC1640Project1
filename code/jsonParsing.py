@@ -9,7 +9,7 @@ def parse_json(filename):
     :rtype: dictionary"""
 
 
-    with open("single_frame.json") as file:
+    with open(filename) as file:
         data = json.load(file)
 
     #print(data)
