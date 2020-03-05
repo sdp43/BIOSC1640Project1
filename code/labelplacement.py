@@ -72,32 +72,41 @@ from math import sqrt
 #add voectors
 #mid point b/t point and center
 #dict
+
+#function that will use the other functions to determine the final label placement
 def place_labs(spheres):
+	#add the vector componenets for spheres generated in the earlier code to an array
 	for sphere in spheres:
 		centerL = spheres[sphere][0]
 		radiusL = spheres[sphere][1]
 		vectors_to_consider = []
 
+		#if a possible label position is w/in the sphere and also at the optimal distance
+		#invert the vector and add it to a distionary of potential vectors for the label
 		for otherSphere in spheres:
 			if otherSphere is not sphere:
 				centerO = spheres[otherSphere][0]
 				radiusO = spheres[otherSphere][1]
 				point = point_closest(centerL, centerO, radiusO)
 				if point_inside_of_sphere(point, centerL, radiusL):
+					#make the vectors point from the label position to the center of the sphere
 					vector_to_centerL = (centerL[0] - point[0], centerL[1] - point[1], centerL[2] - point[2])
 					inverted_vector_to_centerL = invert_vector(vector_to_centerL)
 					vectors_to_consider.append(inverted_vector_to_centerL)
+		#initialize a vector that will be used to add together the magnitudes of the inverted vectors
 		mega_vector = (0,0,0)
-
+		
+		#assign values to mega_vector and use the magnitude generated from the addition to obtain a far bound
 		for vector in vectors_to_consider:
 			mega_vector = (vector[0] + mega_vector[0], vector[1] + mega_vector[1], vector[2] + mega_vector[2])
 		far_point = (centerL[0] + mega_vector[0], centerL[1] + mega_vector[1], centerL[2] + mega_vector[2])
-
+		#if the distance between the center of the sphere and the far point from mega vector is less
+		#than the sphere raidus, calculate a midpoint
 		if distance(centerL, far_point) > radiusL:
 			mag_mega_vector = distance((0,0,0), mega_vector)
 			u_mega_vector = (mega_vector[0]/mag_mega_vector, mega_vector[1]/mag_mega_vector, mega_vector[2]/mag_mega_vector)
 			far_point = ((u_mega_vector[0]*radiusL), (u_mega_vector[0]*radiusL), (u_mega_vector[2]*radiusL))
-
+		#midpoint b/w point and center
 		midpoint = (((centerL[0] + far_point[0])/2), ((centerL[1] + far_point[1])/2), ((centerL[2] + far_point[2])/2))
 
 		spheres[sphere] = (spheres[sphere][0], spheres[sphere][1], midpoint)
@@ -130,7 +139,8 @@ def point_closest(center1, center2, radius2):
 	return (center2[0]+(radius2*uVector[0]), center2[1]+(radius2*uVector[1]), center2[2] + radius2*uVector[2])
 
 
-
+#tests if a point is within a given sphere
+#yes if the distance between the possible label position and the center is within the radius of the sphere
 def point_inside_of_sphere(point, center, radius):
 	if distance(point, center) < radius:
 		return True
