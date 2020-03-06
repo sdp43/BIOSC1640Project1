@@ -1,5 +1,5 @@
-from calculateSphere import distance
-import jsonParsing
+from calculateSphere import distance, calculate_spheres
+from jsonParsing import parse_json
 from math import sqrt
 
 #function that will use the other functions to determine the final label placement
