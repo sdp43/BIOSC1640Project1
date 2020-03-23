@@ -105,19 +105,22 @@ def make_3da(dimensions, spheres):
 #NOT FINISHED 
 def place_labs_3da(spheres, closeSpheres):
 	#add the vector componenets for spheres generated in the earlier code to an array
+	#pdb.set_trace()
 	for sphere in spheres:
+		#print(sphere)
 		centerL = spheres[sphere][0]
 		radiusL = spheres[sphere][1]
 		vectors_to_consider = []
 
-		coords = spheres[sphere][2]	
-		closeSpheres = closeSpheres[coords[0]][coords[1]][coords[2]]
-		print(closeSpheres, " hello")
-		print(len(closeSpheres))
+		coords = spheres[sphere][2]
+		#print(coords)	
+		closeSpheresL = closeSpheres[coords[0]][coords[1]][coords[2]]
+		#print(closeSpheres, " hello")
+		#print(len(closeSpheres))
 		#if a possible label position is w/in the sphere and also at the optimal distance
 		#invert the vector and add it to a distionary of potential vectors for the label
 
-		for otherSphere in closeSpheres:
+		for otherSphere in closeSpheresL:
 			#print(closeSpheres)
 			if otherSphere is not sphere:
 				#print(otherSphere)
@@ -127,7 +130,7 @@ def place_labs_3da(spheres, closeSpheres):
 				if point_inside_of_sphere(point, centerL, radiusL):
 					#make the vectors point from the label position to the center of the sphere
 					vector_to_centerL = (centerL[0] - point[0], centerL[1] - point[1], centerL[2] - point[2])
-					inverted_vector_to_centerL = invert_vector(vector_to_centerL)
+					inverted_vector_to_centerL = invert_vector_mag(vector_to_centerL)
 					vectors_to_consider.append(inverted_vector_to_centerL)
 		#initialize a vector that will be used to add together the magnitudes of the inverted vectors
 		mega_vector = (0,0,0)
@@ -142,6 +145,7 @@ def place_labs_3da(spheres, closeSpheres):
 			mag_mega_vector = distance((0,0,0), mega_vector)
 			u_mega_vector = (mega_vector[0]/mag_mega_vector, mega_vector[1]/mag_mega_vector, mega_vector[2]/mag_mega_vector)
 			far_point = ((u_mega_vector[0]*radiusL), (u_mega_vector[0]*radiusL), (u_mega_vector[2]*radiusL))
+			far_point = ((far_point[0] + centerL[0]), (far_point[1] + centerL[1]), (far_point[2] + centerL[2]))
 		#midpoint b/w point and center
 		midpoint = (((centerL[0] + far_point[0])/2), ((centerL[1] + far_point[1])/2), ((centerL[2] + far_point[2])/2))
 
@@ -269,7 +273,7 @@ if __name__ == "__main__":
 
 	#print(test)
 	#print(aa_spheres)
-	aa_spheres = place_labs(aa_spheres)
+	#aa_spheres = place_labs(aa_spheres)
 
 	print(aa_spheres)
 	dim = [3,3,3]
@@ -280,4 +284,5 @@ if __name__ == "__main__":
 	
 	print(len(aa_spheres))
 	#print(space)
-	#place_labs_3da(aa_spheres, space)
+	place_labs_3da(aa_spheres, space)
+	print(aa_spheres)
